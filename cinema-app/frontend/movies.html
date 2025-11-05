@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление фильмами - Кинотеатр</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Управление фильмами</h1>
+            <nav>
+                <a href="index.html" class="btn">Главная</a>
+                <button id="logoutBtn" class="btn btn-secondary">Выйти</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Форма добавления/редактирования -->
+            <div class="movie-form">
+                <h2 id="formTitle">Добавить новый фильм</h2>
+                <form id="movieForm">
+                    <input type="hidden" id="movieId">
+
+                    <div class="form-group">
+                        <label for="title">Название:</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genre">Жанр:</label>
+                        <input type="text" id="genre" name="genre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="director">Режиссер:</label>
+                        <input type="text" id="director" name="director" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Рейтинг:</label>
+                        <input type="number" id="rating" name="rating" step="0.1" min="0" max="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="releaseDate">Дата выхода:</label>
+                        <input type="date" id="release_date" name="release_date" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <button type="button" id="cancelEdit" class="btn btn-secondary"
+                        style="display:none;">Отмена</button>
+                </form>
+            </div>
+
+            <!-- Список фильмов для управления -->
+            <div class="movies-list">
+                <h2>Управление фильмами</h2>
+                <div id="moviesContainer" class="movies-grid">
+                    <!-- Фильмы будут загружены здесь с кнопками управления -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

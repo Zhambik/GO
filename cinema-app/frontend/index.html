@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинотеатр - Все фильмы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Кинотеатр</h1>
+            <nav>
+                <a href="login.html" class="btn">Войти</a>
+                <a href="register.html" class="btn">Регистрация</a>
+                <a href="movies.html" class="btn">Управление фильмами</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero">
+                <h2>Фильмы</h2>
+            </div>
+
+            <!-- Фильтры и поиск -->
+            <div class="filters">
+                <h2>Поиск и фильтрация</h2>
+                <div class="filter-group">
+                    <input type="text" id="searchTitle" placeholder="Поиск по названию">
+                    <input type="text" id="searchGenre" placeholder="Фильтр по жанру">
+                    <input type="text" id="searchDirector" placeholder="Поиск по режиссеру">
+                    <select id="sortField">
+                        <option value="">Сортировать по...</option>
+                        <option value="title">Названию</option>
+                        <option value="rating">Рейтингу</option>
+                        <option value="release_date">Дате выхода</option>
+                    </select>
+                    <select id="sortOrder">
+                        <option value="asc">По возрастанию</option>
+                        <option value="desc">По убыванию</option>
+                    </select>
+                    <button id="applyFilters" class="btn">Применить</button>
+                    <button id="clearFilters" class="btn btn-secondary">Сбросить</button>
+                </div>
+            </div>
+
+            <!-- Список фильмов -->
+            <div class="movies-list">
+                <h2>Все фильмы</h2>
+                <div id="moviesContainer" class="movies-grid">
+                    <!-- Фильмы будут загружены здесь -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
